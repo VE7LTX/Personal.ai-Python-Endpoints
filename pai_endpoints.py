@@ -1,4 +1,27 @@
-'''Here's an example of how you might present a detailed explanation of the functions in your code using a style similar to that found in a whitepaper or a technical document.
+'''
+This Python file follows a Python-specific adaptation of the "Power of Ten" programming rules.
+
+1. Simplicity: The requests library is used for simplicity. The control flow is straightforward with minimal branching.
+
+2. Loop Control: There are no loops in this code, but if they were needed, they would have a clear upper-bound to the number of iterations.
+
+3. Memory Management: API responses are stored only if required, to avoid unnecessary memory usage.
+
+4. Function Length: Each function has a single, clear purpose, and is less than 60 lines long.
+
+5. Assertions: Assertions are used to check that the API responses are as expected.
+
+6. Scope: Variables are defined at the smallest possible level of scope.
+
+7. Error Handling: The return value of each API request is checked, and an exception is raised if an error occurs.
+
+8. Import Management: Only the necessary Python modules (requests and json) are imported.
+
+9. References: Immutable data structures are used where possible.
+
+10. Linting and Static Analysis: The code should be regularly checked with a linter and a static type checker. 
+
+These rules are designed to promote code that is reliable, easy to understand, and safe from common types of programming errors.
 
 Overview
 This codebase consists of three primary functions, each designed to interact with the Personal AI (P.A.I) API in a unique way. This API allows for data input into the AI system, offering a user interface that the AI can utilize to understand and interact with its user more effectively. These functions are all developed in Python and utilize the requests library for HTTP communications.
