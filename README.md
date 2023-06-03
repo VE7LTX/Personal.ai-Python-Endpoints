@@ -42,6 +42,35 @@ Please refer to the script file for more details on how to use these functions. 
 
 ## Testing
 
+Validate API Key
+To validate your API key, you can use the validate_api_key() function. This function communicates with the Personal AI API's validate endpoint to check the validity of the API key.
+'''
+import requests
+
+def validate_api_key(api_key: str) -> None:
+    """
+    This function validates the provided API key.
+
+    :param api_key: The API key to validate.
+    :raises ValueError: If the API key is not valid.
+    """
+    url = "https://api.personal.ai/v1/api-key/validate"
+    
+    headers = {
+        'Content-Type': 'application/json',
+        'x-api-key': api_key
+    }
+    
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code != 200:
+        raise ValueError("API key validation failed")
+
+api_key = "your-personal-ai-api-key"
+validate_api_key(api_key)
+'''
+Please make sure to replace "your-personal-ai-api-key" with your actual Personal AI API key. This function ensures that the API key is validated correctly before proceeding with any API requests.
+
 You can test these functions by running them in a Python environment and providing the necessary parameters.
 
 Example:
