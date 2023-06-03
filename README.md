@@ -44,7 +44,8 @@ Please refer to the script file for more details on how to use these functions. 
 
 Validate API Key
 To validate your API key, you can use the validate_api_key() function. This function communicates with the Personal AI API's validate endpoint to check the validity of the API key.
-'''
+
+
 import requests
 
 def validate_api_key(api_key: str) -> None:
