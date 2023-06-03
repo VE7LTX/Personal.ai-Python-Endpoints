@@ -1,26 +1,15 @@
 '''
 This Python file follows a Python-specific adaptation of the "Power of Ten" programming rules.
-
 1. Simplicity: The requests library is used for simplicity. The control flow is straightforward with minimal branching.
-
 2. Loop Control: There are no loops in this code, but if they were needed, they would have a clear upper-bound to the number of iterations.
-
 3. Memory Management: API responses are stored only if required, to avoid unnecessary memory usage.
-
 4. Function Length: Each function has a single, clear purpose, and is less than 60 lines long.
-
 5. Assertions: Assertions are used to check that the API responses are as expected.
-
 6. Scope: Variables are defined at the smallest possible level of scope.
-
 7. Error Handling: The return value of each API request is checked, and an exception is raised if an error occurs.
-
 8. Import Management: Only the necessary Python modules (requests and json) are imported.
-
 9. References: Immutable data structures are used where possible.
-
 10. Linting and Static Analysis: The code should be regularly checked with a linter and a static type checker. 
-
 These rules are designed to promote code that is reliable, easy to understand, and safe from common types of programming errors.
 
 Overview
@@ -28,21 +17,16 @@ This codebase consists of three primary functions, each designed to interact wit
 
 upload_memory()
 The upload_memory() function enables users to upload text-based memories to their Personal AI's memory stack. Each memory is attached with a source name and can optionally include the time of creation, the device from which the memory was created, and a raw feed text.
-
 The function communicates with the API endpoint by making a POST request with an API key in the header for authentication. A payload in JSON format, carrying all the required and optional memory data, is sent in the request. If the memory block creation is unsuccessful, the function raises an exception.
-
 This function is critical in supplying the AI with past text-based data or experiences that the user wants it to learn from and consider during its interactions with the user.
 
 send_ai_message()
 The send_ai_message() function allows users to send messages to their Personal AI and retrieve responses from it. This function communicates with the P.A.I. API via a POST request, including the API key for authentication, and the text and optional context as a payload in JSON format.
-
 If the request is unsuccessful, an exception is raised. The function returns the response from the AI, allowing users to interact with their AI in a conversational manner, using the provided text and context.
 
 upload_url()
 The upload_url() function lets users upload a URL to the Personal AI's memory stack. This can be particularly useful when the user wants their AI to consider web content during its interactions. The function communicates with the P.A.I. API using a POST request, including the API key for authentication, and the URL, start time, and source app as a payload in JSON format.
-
 Just like the other functions, this function raises an exception when the request is unsuccessful, ensuring that errors in URL upload operations are promptly flagged.
-
 These functions lay the groundwork for a Python-based application that interacts with the Personal AI system. By combining them in a coherent manner, one can develop an application that provides seamless integration between a user and their AI, thus enhancing the user's experience.
 '''
 
