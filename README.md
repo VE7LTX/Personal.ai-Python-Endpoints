@@ -18,7 +18,7 @@ To get started, you need:
 
 Clone this repository to your local machine.
 
-git clone https://github.com/<your-username>/personal-ai-python-endpoints.git
+git clone https://github.com/<your-username>personal-ai-python-endpoints.git
 
 ## Usage
 
