@@ -3,6 +3,11 @@ Author: Matthew Schafer
 Date: June 5, 2023
 Description: A script to generate a random Cisco IOS command question, get an answer from GPT-3, 
              and create a memory in Personal.ai with the question and answer.
+   SAMPLE CLI OUTPUT AS FOLLOWS:
+Processing command: vlan
+Memory data for 'vlan': {'Text': 'Question: What does the Cisco IOS command \'vlan\' do?\nAnswer: The "vlan" command in Cisco IOS creates a new virtual local area network (VLAN) or modifies an existing one. VLANs allow for the segmentation of a physical network into multiple logical networks, improving network security and performance by isolating traffic between groups of devices. The "vlan" command is used to configure VLAN membership for switch ports, enabling traffic between devices on the same VLAN and blocking traffic between devices on different VLANs.', 'SourceName': 'Python Cisco IOS Command Knowledge Generator', 'CreatedTime': 'Sun, 04 Jun 2023 10:22:51 Pacific Daylight Time', 'DeviceName': 'Change this Device Name Here', 'DomainName': 'ms-cisco-lvl-1', 'RawFeedText': '<p>Question: What does the Cisco IOS command \'vlan\' do?<br>Answer: The "vlan" command in Cisco IOS creates a new virtual local area network (VLAN) or modifies an existing one. VLANs allow for the segmentation of a physical network into multiple logical networks, improving network security and performance by isolating traffic between groups of devices. The "vlan" command is used to configure VLAN membership for switch ports, enabling traffic between devices on the same VLAN and blocking traffic between devices on different VLANs.</p>', 'Tags': ['Cisco', 'Cisco IOS', 'Command', 'vlan']}
+Memory creation status for 'vlan': Memblock Created             
+             
 """
 
 import requests
