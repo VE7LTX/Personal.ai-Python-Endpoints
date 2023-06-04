@@ -123,7 +123,42 @@ cisco_ios_commands = [
     "aaa authentication login",
     "username",
     "tacacs-server host",
-    "radius-server host"
+    "radius-server host",
+    "show ip bgp summary",
+    "show ip bgp",
+    "show standby brief",
+    "show frame-relay lmi",
+    "show frame-relay map",
+    "show ldp neighbor",
+    "show mpls forwarding-table",
+    "show ipv6 interface brief",
+    "show ipv6 route",
+    "show inventory",
+    "show redundancy",
+    "show power inline",
+    "show environment",
+    "show cdp neighbors",
+    "show cdp neighbors detail",
+    "show ip arp",
+    "show controllers serial",
+    "show ntp status",
+    "show ntp associations",
+    "show interfaces status",
+    "show interfaces description",
+    "show ip ospf neighbor",
+    "show ip ospf interface",
+    "show ip ospf database",
+    "show bgp ipv4 unicast summary",
+    "show bgp ipv4 unicast neighbors",
+    "show ip bgp ipv4 unicast",
+    "show spanning-tree summary",
+    "show spanning-tree detail",
+    "show ip dhcp binding",
+    "show ip dhcp pool",
+    "show ip dhcp server statistics",
+    "debug condition",
+    "ip dhcp excluded-address",
+    "ip dhcp pool"
 ]
 
 
@@ -168,7 +203,19 @@ def main():
 
     for command in cisco_ios_commands:
         # Generate question and answer about each Cisco IOS command
-        question = f"What does the Cisco IOS command '{command}' do?"
+        question = f"""
+        1. **Command Operation**: How does the Cisco IOS command '{command}' work? Can you provide a detailed explanation of its functionality?
+        2. **Syntax and Parameters**: What is the syntax for using this command and what parameters are available?
+        3. **Alternate Commands**: Are there any alternate commands that can accomplish similar tasks to '{command}'?
+        4. **Practical Use Cases**: Could you provide some practical use cases or real-world scenarios where '{command}' might be used?
+        5. **Command Efficiency**: What are some tips or tricks to use the '{command}' more efficiently or to get the most out of it?
+        6. **Uncommon Knowledge**: Is there any uncommon knowledge or lesser-known facts about '{command}' that might be useful to know?
+        7. **Learning Resources**: What resources are available for further learning about '{command}'? Can you recommend any online tutorials, courses, or documentation?
+        8. **Troubleshooting**: What are some common issues or errors that might arise when using '{command}' and how can they be resolved?
+        9. **Command Variations**: Are there variations of '{command}' in different versions or models of Cisco hardware? If so, how do they differ?
+        10. **Security Considerations**: What are the security implications or potential risks of using '{command}'?
+        """
+
         answer = ask_gpt(question)
     
         memory_data = {
